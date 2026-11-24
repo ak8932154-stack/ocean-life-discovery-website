@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marine Species Taxonomic Directory &amp; Structured XML Data Explorer - Ocean Life Discovery Lab Project.">
+  <title>Marine Species Catalog &amp; XML Data | Ocean Life Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Academic Notice Header -->
+  <div class="top-notice-bar">
+    <div>
+      <span class="notice-badge">Taxonomy Lab</span>
+      <span>Marine Species Taxonomic Catalog &bull; OBIS-Compliant XML Architecture</span>
+    </div>
+    <div>
+      <span>Structured Bio-Informatics &bull; 2026</span>
+    </div>
+  </div>
+
+  <!-- Primary Semantic Header & Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <span class="brand-icon">🌊</span>
+        <div class="brand-title">
+          <h1>Ocean Life Discovery</h1>
+          <span class="brand-subtitle">Marine Biodiversity &amp; Oceanography</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">&#9776;</button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><span>🏠</span> Home</a></li>
+          <li><a href="species.html" class="active"><span>🐋</span> Marine Species</a></li>
+          <li><a href="ecosystems.html"><span>🌿</span> Ocean Ecosystems</a></li>
+          <li><a href="gallery.html"><span>📷</span> Underwater Galleries</a></li>
+          <li><a href="awareness.html"><span>🛡️</span> Awareness &amp; Action</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="page-hero">
+    <div class="page-hero-content">
+      <h1>Global Marine Species Directory</h1>
+      <p>
+        Explore taxonomic classifications, trophic diets, vertical bathymetric depth distributions, and conservation vulnerability metrics. This module features real-time search filtration, dynamic DOM updates, and an integrated XML database demonstrating well-formed biological data structures.
+      </p>
+      <div class="hero-actions">
+        <a href="#speciesCatalog" class="btn btn-primary">Browse Catalog</a>
+        <a href="#xmlSection" class="btn btn-secondary">Explore XML Database</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Interactive Search and Filter Controls -->
+    <section id="speciesCatalog" class="section-header">
+      <h2>Marine Fauna Taxonomic Directory</h2>
+      <p>
+        Filter species across biological classes or enter search queries to isolate specific organisms by common or scientific designations.
+      </p>
+    </section>
+
+    <!-- Controls Bar (Flexbox) -->
+    <div class="catalog-controls">
+      <div class="search-box">
+        <input type="text" id="speciesSearchInput" class="search-input" placeholder="Search by common name, genus, or habitat..." aria-label="Search marine species">
+      </div>
+
+      <div class="filter-tags" id="filterTagsContainer">
+        <button class="filter-btn active" data-category="all">All Taxa</button>
+        <button class="filter-btn" data-category="Mammalia">Mammalia</button>
+        <button class="filter-btn" data-category="Reptilia">Reptilia</button>
+        <button class="filter-btn" data-category="Chondrichthyes">Chondrichthyes</button>
+        <button class="filter-btn" data-category="Actinopterygii">Actinopterygii</button>
+        <button class="filter-btn" data-category="Mollusca">Mollusca</button>
+        <button class="filter-btn" data-category="Cnidaria">Cnidaria</button>
+      </div>
+
+      <div class="catalog-stats">
+        Showing <span id="speciesCountBadge">10</span> of 10 Specimen Records
+      </div>
+    </div>
+
+    <!-- Species Grid (CSS Grid & Flex Cards) -->
+    <section class="species-grid" id="speciesGrid">
+      <!-- Species Card 1 -->
+      <article class="species-card" data-category="Mammalia" data-name="Blue Whale Balaenoptera musculus">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=800&q=80" alt="Blue Whale swimming" loading="lazy">
+          <span class="species-badge badge-endangered">Endangered</span>
+        </div>
+        <div class="species-body">
+          <h3>Blue Whale</h3>
+          <span class="species-scientific">Balaenoptera musculus</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Mammalia</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 500 meters</span></li>
+            <li><strong>Diet:</strong> <span>Krill Filter Feeder</span></li>
+            <li><strong>Lifespan:</strong> <span>80 &ndash; 90 Years</span></li>
+          </ul>
+          <p>
+            The blue whale is the largest known organism on Earth. A single specimen can weigh upwards of 150 metric tons, expending gargantuan energy filtering Antarctic krill swarms through specialized keratinous baleen plates.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP001">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 2 -->
+      <article class="species-card" data-category="Reptilia" data-name="Green Sea Turtle Chelonia mydas">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Green Sea Turtle" loading="lazy">
+          <span class="species-badge badge-endangered">Endangered</span>
+        </div>
+        <div class="species-body">
+          <h3>Green Sea Turtle</h3>
+          <span class="species-scientific">Chelonia mydas</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Reptilia</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 110 meters</span></li>
+            <li><strong>Diet:</strong> <span>Herbivorous (Seagrasses)</span></li>
+            <li><strong>Lifespan:</strong> <span>60 &ndash; 70 Years</span></li>
+          </ul>
+          <p>
+            Highly migratory marine reptiles occupying circumglobal tropical and subtropical ocean waters. Their systematic cropping of marine seagrass meadows sustains coastal benthic primary productivity.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP002">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 3 -->
+      <article class="species-card" data-category="Actinopterygii" data-name="Clown Anemonefish Amphiprion ocellaris">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=800&q=80" alt="Clown Anemonefish in sea anemone" loading="lazy">
+          <span class="species-badge badge-least-concern">Least Concern</span>
+        </div>
+        <div class="species-body">
+          <h3>Clown Anemonefish</h3>
+          <span class="species-scientific">Amphiprion ocellaris</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Actinopterygii</span></li>
+            <li><strong>Depth Range:</strong> <span>1 &ndash; 15 meters</span></li>
+            <li><strong>Diet:</strong> <span>Omnivorous (Algae &amp; Plankton)</span></li>
+            <li><strong>Lifespan:</strong> <span>6 &ndash; 10 Years</span></li>
+          </ul>
+          <p>
+            Maintains an obligate mutualistic relationship with sea anemones. Coated with protective glycoproteins, this teleost fish provides tactile cleaning and territorial vigilance to its cnidarian host.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP003">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 4 -->
+      <article class="species-card" data-category="Chondrichthyes" data-name="Giant Oceanic Manta Ray Mobula birostris">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=800&q=80" alt="Manta Ray swimming" loading="lazy">
+          <span class="species-badge badge-endangered">Endangered</span>
+        </div>
+        <div class="species-body">
+          <h3>Giant Oceanic Manta Ray</h3>
+          <span class="species-scientific">Mobula birostris</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Chondrichthyes</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 1,000 meters</span></li>
+            <li><strong>Diet:</strong> <span>Planktivorous Filter Feeder</span></li>
+            <li><strong>Lifespan:</strong> <span>40 &ndash; 50 Years</span></li>
+          </ul>
+          <p>
+            An elasmobranch exhibiting cephalic lobes specialized for channeling zooplankton blooms into its mouth. Possessing high encephalization quotients, manta rays display sophisticated social behaviors.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP004">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 5 -->
+      <article class="species-card" data-category="Mollusca" data-name="Giant Pacific Octopus Enteroctopus dofleini">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=800&q=80" alt="Giant Pacific Octopus" loading="lazy">
+          <span class="species-badge badge-least-concern">Least Concern</span>
+        </div>
+        <div class="species-body">
+          <h3>Giant Pacific Octopus</h3>
+          <span class="species-scientific">Enteroctopus dofleini</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Mollusca (Cephalopoda)</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 750 meters</span></li>
+            <li><strong>Diet:</strong> <span>Carnivore (Crabs &amp; Mollusks)</span></li>
+            <li><strong>Lifespan:</strong> <span>3 &ndash; 5 Years</span></li>
+          </ul>
+          <p>
+            The world's largest cephalopod mollusk. Equipped with three systemic hearts, copper-based hemocyanin blood, and millions of dermal chromatophore cells facilitating instantaneous dynamic camouflage.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP005">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 6 -->
+      <article class="species-card" data-category="Actinopterygii" data-name="Deep Sea Anglerfish Melanocetus johnsonii">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Deep sea bioluminescent life" loading="lazy">
+          <span class="species-badge badge-least-concern">Least Concern</span>
+        </div>
+        <div class="species-body">
+          <h3>Deep Sea Anglerfish</h3>
+          <span class="species-scientific">Melanocetus johnsonii</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Actinopterygii</span></li>
+            <li><strong>Depth Range:</strong> <span>1,000 &ndash; 3,000 meters</span></li>
+            <li><strong>Diet:</strong> <span>Deep Pelagic Piscivore</span></li>
+            <li><strong>Lifespan:</strong> <span>15 &ndash; 20 Years</span></li>
+          </ul>
+          <p>
+            Adapted to extreme hydrostatic pressures and complete solar absence. Female specimens lure bathypelagic prey using a modified dorsal ray topped with a bioluminescent symbiotic bacterial bulb.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP006">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 7 -->
+      <article class="species-card" data-category="Cnidaria" data-name="Moon Jellyfish Aurelia aurita">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544551763-8dd44758c2dd?auto=format&fit=crop&w=800&q=80" alt="Translucent Moon Jellyfish" loading="lazy">
+          <span class="species-badge badge-least-concern">Least Concern</span>
+        </div>
+        <div class="species-body">
+          <h3>Moon Jellyfish</h3>
+          <span class="species-scientific">Aurelia aurita</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Cnidaria (Scyphozoa)</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 200 meters</span></li>
+            <li><strong>Diet:</strong> <span>Carnivore (Planktonic Larvae)</span></li>
+            <li><strong>Lifespan:</strong> <span>8 &ndash; 12 Months</span></li>
+          </ul>
+          <p>
+            Characterized by a translucent umbrella-shaped bell and four horseshoe-shaped gonads visible through the mesoglea. Propelled via coronal muscle contractions to capture microfauna on stinging nematocysts.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP007">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 8 -->
+      <article class="species-card" data-category="Chondrichthyes" data-name="Great White Shark Carcharodon carcharias">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=800&q=80" alt="Great White Shark swimming" loading="lazy">
+          <span class="species-badge badge-vulnerable">Vulnerable</span>
+        </div>
+        <div class="species-body">
+          <h3>Great White Shark</h3>
+          <span class="species-scientific">Carcharodon carcharias</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Chondrichthyes</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 1,200 meters</span></li>
+            <li><strong>Diet:</strong> <span>Apex Marine Mammals &amp; Fish</span></li>
+            <li><strong>Lifespan:</strong> <span>Up to 70 Years</span></li>
+          </ul>
+          <p>
+            An apex lamniform predator maintaining counter-current vascular heat exchange systems to elevate body temperature above surrounding ambient waters, optimizing hunting velocity.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP008">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 9 -->
+      <article class="species-card" data-category="Chordata" data-name="Emperor Penguin Aptenodytes forsteri">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&fit=crop&w=800&q=80" alt="Emperor Penguin" loading="lazy">
+          <span class="species-badge badge-vulnerable">Near Threatened</span>
+        </div>
+        <div class="species-body">
+          <h3>Emperor Penguin</h3>
+          <span class="species-scientific">Aptenodytes forsteri</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Aves (Sphenisciformes)</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 535 meters</span></li>
+            <li><strong>Diet:</strong> <span>Piscivore (Krill, Squid, Fish)</span></li>
+            <li><strong>Lifespan:</strong> <span>15 &ndash; 20 Years</span></li>
+          </ul>
+          <p>
+            Specialized flightless seabird capable of extraordinary apnea dives in sub-zero polar seas. Possesses solid bone density to counteract buoyancy and oxygen-binding myoglobin stores in cardiac muscle.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP009">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+
+      <!-- Species Card 10 -->
+      <article class="species-card" data-category="Cnidaria" data-name="Staghorn Coral Acropora cervicornis">
+        <div class="species-img-wrap">
+          <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80" alt="Staghorn Coral Reef" loading="lazy">
+          <span class="species-badge badge-endangered">Critically Endangered</span>
+        </div>
+        <div class="species-body">
+          <h3>Staghorn Coral</h3>
+          <span class="species-scientific">Acropora cervicornis</span>
+          <ul class="species-meta">
+            <li><strong>Class:</strong> <span>Cnidaria (Anthozoa)</span></li>
+            <li><strong>Depth Range:</strong> <span>0 &ndash; 30 meters</span></li>
+            <li><strong>Diet:</strong> <span>Photosynthetic Symbiosis</span></li>
+            <li><strong>Lifespan:</strong> <span>Centuries (Colonial)</span></li>
+          </ul>
+          <p>
+            A foundational hermatypic scleractinian coral that builds architectural scaffolding for shallow tropical reefs. Highly susceptible to elevated sea surface temperatures and ocean acidification.
+          </p>
+          <button class="btn btn-sm btn-primary open-specimen-modal" data-id="SP010">Taxonomic Profile &rarr;</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- SECTION: XML Integration & Well-Formed Structure Demonstration -->
+    <section id="xmlSection" class="xml-container">
+      <div class="xml-header-flex">
+        <div>
+          <h2>Structured XML Marine Life Database</h2>
+          <p>
+            Demonstrating structured XML data modeling and dynamic DOM parsing (Requirement 6). The file <code>marine_data.xml</code> follows rigorous well-formed hierarchical standards.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <button id="btnParseXml" class="btn btn-primary">
+            <span>⚙️</span> Parse &amp; Render XML Data Table
+          </button>
+          <button id="btnToggleRawXml" class="btn btn-secondary" style="border-color: var(--color-navy); color: var(--color-navy);">
+            <span>📄</span> Toggle Raw XML Source
+          </button>
+        </div>
+      </div>
+
+      <!-- Raw XML Source View (Hidden by default, toggled with JS) -->
+      <div id="rawXmlContainer" style="display: none; margin-bottom: 2rem;">
+        <h4>Well-Formed XML Source Listing (<code>marine_data.xml</code>):</h4>
+        <pre class="xml-code-box" id="xmlCodeDisplay">Loading XML document hierarchy...</pre>
+      </div>
+
+      <!-- Parsed Dynamic XML Table Target -->
+      <div id="parsedXmlOutput" style="display: none;">
+        <h4>Parsed XML Taxonomic Dataset (Generated via DOMParser):</h4>
+        <div class="table-responsive">
+          <table class="ocean-table" id="xmlParsedTable">
+            <caption>Table 2.1: Asynchronously Parsed XML Biological Records (DOM Rendered)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Record ID</th>
+                <th scope="col">Common Name</th>
+                <th scope="col">Scientific Name</th>
+                <th scope="col">Class</th>
+                <th scope="col">Depth Range</th>
+                <th scope="col">Conservation Status</th>
+                <th scope="col">Trophic Diet</th>
+              </tr>
+            </thead>
+            <tbody id="xmlTableBody">
+              <!-- Dynamically populated by JavaScript DOMParser -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Taxonomic Detail Modal Dialog -->
+  <div class="modal-overlay" id="speciesModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalSpeciesTitle">
+    <div class="modal-dialog" style="max-width: 650px; text-align: left;">
+      <h3 id="modalSpeciesTitle" style="text-align: left; color: var(--color-deep-ocean);">Taxonomic Specimen Profile</h3>
+      <p id="modalSpeciesScientific" style="font-style: italic; color: var(--color-teal); font-size: 1.4rem; margin-bottom: 1rem;"></p>
+      
+      <div id="modalSpeciesDetails" style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 1.5rem;">
+        <!-- Populated via DOM manipulation -->
+      </div>
+
+      <div style="text-align: right;">
+        <button class="btn btn-primary" id="closeSpeciesModalBtn">Close Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Semantic Footer -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Ocean Life Discovery</h4>
+        <p>
+          Taxonomic species directory utilizing structured XML modeling, DOM parsing, and asynchronous dataset retrieval for marine laboratory investigation.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Interconnected Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">&rarr; Home Portal</a></li>
+          <li><a href="species.html">&rarr; Marine Species Catalog</a></li>
+          <li><a href="ecosystems.html">&rarr; Ocean Ecosystems</a></li>
+          <li><a href="gallery.html">&rarr; Underwater Galleries</a></li>
+          <li><a href="awareness.html">&rarr; Awareness &amp; Action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>XML Architecture Standards</h4>
+        <p>
+          Complies with W3C XML 1.0 recommendations. Contains explicit attributes, metadata roots, closed taxonomic nodes, and standardized tags.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ocean Life Discovery Project. Lab Project Module 2: Species Directory &amp; XML Database.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

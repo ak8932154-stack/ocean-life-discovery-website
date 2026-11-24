@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Underwater Galleries &amp; Optical Marine Registry - High-resolution marine photography with interactive lightbox modal.">
+  <title>Underwater Galleries | Ocean Life Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Academic Notice Header -->
+  <div class="top-notice-bar">
+    <div>
+      <span class="notice-badge">Optical Lab</span>
+      <span>Sub-Surface Optical Imaging &amp; Marine Photogrammetry Gallery</span>
+    </div>
+    <div>
+      <span>High-Resolution Marine Registry &bull; 2026</span>
+    </div>
+  </div>
+
+  <!-- Primary Semantic Header & Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <span class="brand-icon">🌊</span>
+        <div class="brand-title">
+          <h1>Ocean Life Discovery</h1>
+          <span class="brand-subtitle">Marine Biodiversity &amp; Oceanography</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">&#9776;</button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><span>🏠</span> Home</a></li>
+          <li><a href="species.html"><span>🐋</span> Marine Species</a></li>
+          <li><a href="ecosystems.html"><span>🌿</span> Ocean Ecosystems</a></li>
+          <li><a href="gallery.html" class="active"><span>📷</span> Underwater Galleries</a></li>
+          <li><a href="awareness.html"><span>🛡️</span> Awareness &amp; Action</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="page-hero">
+    <div class="page-hero-content">
+      <h1>Sub-Surface Underwater Optical Gallery</h1>
+      <p>
+        Underwater photography provides vital empirical evidence for non-invasive ecological monitoring, species behavioral documentation, and coral bleaching assessments. Explore our photographic catalog with real-time categorisation and an interactive modal lightbox viewer.
+      </p>
+      <div class="hero-actions">
+        <a href="#galleryGridSection" class="btn btn-primary">Browse Gallery Photographs</a>
+        <a href="#opticsTable" class="btn btn-secondary">Subsea Optical Specifications</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Gallery Controls & Category Filter Buttons -->
+    <section id="galleryGridSection" class="section-header">
+      <h2>Visual Marine Specimen &amp; Habitat Registry</h2>
+      <p>
+        Select a classification tag below to isolate specific photographic subjects. Click any individual photograph to trigger the interactive JavaScript modal lightbox viewer for high-resolution inspection and optical metadata.
+      </p>
+    </section>
+
+    <!-- Filter Buttons (Flexbox) -->
+    <div class="gallery-filter-bar">
+      <button class="filter-btn active" data-gallery-filter="all">All Photography (12)</button>
+      <button class="filter-btn" data-gallery-filter="reef">Coral Reef Systems</button>
+      <button class="filter-btn" data-gallery-filter="megafauna">Pelagic Megafauna</button>
+      <button class="filter-btn" data-gallery-filter="invertebrate">Marine Invertebrates</button>
+      <button class="filter-btn" data-gallery-filter="abyss">Deep Oceanic / Nocturnal</button>
+    </div>
+
+    <!-- Gallery Grid (CSS Grid) -->
+    <section class="gallery-grid" id="galleryContainer">
+      <!-- Image 1 -->
+      <figure class="gallery-item" data-category="megafauna" data-index="0"
+              data-title="Blue Whale Surface Lunge"
+              data-photographer="NOAA Marine Mammal Survey"
+              data-habitat="Open Pelagic Oceans"
+              data-desc="An adult Blue Whale surfaces off polar upwelling zones to breathe through its dual blowholes before embarking upon a deep foraging dive.">
+        <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1000&q=80" alt="Blue Whale swimming gracefully" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Blue Whale Surface Lunge</h4>
+          <span>Category: Pelagic Megafauna &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 2 -->
+      <figure class="gallery-item" data-category="megafauna" data-index="1"
+              data-title="Green Sea Turtle Foraging"
+              data-photographer="Pacific Marine Biodiversity Survey"
+              data-habitat="Coral Reef Crest"
+              data-desc="Chelonia mydas browsing on green macroalgae along the shallow reef flats in clear tropical oligotrophic waters.">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80" alt="Green Sea Turtle gliding through crystal waters" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Green Sea Turtle Foraging</h4>
+          <span>Category: Pelagic Megafauna &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 3 -->
+      <figure class="gallery-item" data-category="reef" data-index="2"
+              data-title="Ocellaris Anemonefish Symbiosis"
+              data-photographer="Indo-Pacific Coral Reef Assessment"
+              data-habitat="Shallow Coral Reefs"
+              data-desc="A clownfish shelter in stinging Heteractis magnifica tentacles, protected by a specialized biological skin mucus that prevents nematocyst firing.">
+        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=1000&q=80" alt="Clownfish in sea anemone" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Clownfish &amp; Anemone Symbiosis</h4>
+          <span>Category: Coral Reef Systems &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 4 -->
+      <figure class="gallery-item" data-category="megafauna" data-index="3"
+              data-title="Giant Oceanic Manta Flight"
+              data-photographer="Oceanic Megafauna Foundation"
+              data-habitat="Pelagic Seamounts"
+              data-desc="Mobula birostris executing aerodynamic barrel rolls while barrel-feeding planktonic copepods over an isolated submarine ridge.">
+        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1000&q=80" alt="Manta ray swimming through deep blue sea" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Giant Oceanic Manta Flight</h4>
+          <span>Category: Pelagic Megafauna &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 5 -->
+      <figure class="gallery-item" data-category="invertebrate" data-index="4"
+              data-title="Giant Pacific Octopus Dermal Display"
+              data-photographer="North Pacific Benthic Exploration"
+              data-habitat="Cold Temperate Rocky Reefs"
+              data-desc="Enteroctopus dofleini manipulating millions of pigment-filled dermal chromatophores to match adjacent granitic boulders within milliseconds.">
+        <img src="https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&fit=crop&w=1000&q=80" alt="Giant Pacific Octopus displaying tentacles" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Giant Octopus Chromatophores</h4>
+          <span>Category: Marine Invertebrates &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 6 -->
+      <figure class="gallery-item" data-category="abyss" data-index="5"
+              data-title="Deep Sea Bathypelagic Bioluminescence"
+              data-photographer="Schmidt Ocean Institute Submersible"
+              data-habitat="Bathypelagic Zone (2,200m)"
+              data-desc="High-gain optical capture of luciferase-catalyzed photophore arrays producing cold blue-green wavelength light in absolute oceanic darkness.">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80" alt="Bioluminescent deep sea phenomenon" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Bathypelagic Bioluminescence</h4>
+          <span>Category: Deep Oceanic &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 7 -->
+      <figure class="gallery-item" data-category="invertebrate" data-index="6"
+              data-title="Aurelia Aurita Pulsing Bell"
+              data-photographer="Baltic Marine Research Lab"
+              data-habitat="Coastal Inshore Neritic Zone"
+              data-desc="Radial coronal muscle contractions propel the ninety-five percent water gelatinous bell of the moon jellyfish, sweeping microplankton into its oral arms.">
+        <img src="https://images.unsplash.com/photo-1544551763-8dd44758c2dd?auto=format&fit=crop&w=1000&q=80" alt="Moon jellyfish swimming in dark water" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Moon Jellyfish Pulsing Bell</h4>
+          <span>Category: Marine Invertebrates &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 8 -->
+      <figure class="gallery-item" data-category="megafauna" data-index="7"
+              data-title="Great White Shark Pelagic Patrol"
+              data-photographer="Apex Predator Acoustic Tagging Project"
+              data-habitat="Temperate Coastal Shelf"
+              data-desc="Carcharodon carcharias utilizing countershaded coloration and ampullae of Lorenzini electroreceptors to detect electrical impulses from prospective prey.">
+        <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1000&q=80" alt="Great white shark in open water" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Great White Pelagic Patrol</h4>
+          <span>Category: Pelagic Megafauna &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 9 -->
+      <figure class="gallery-item" data-category="reef" data-index="8"
+              data-title="Staghorn Coral Calcareous Thicket"
+              data-photographer="Caribbean Coral Reef Restoration"
+              data-habitat="Shallow Reef Crest (5m)"
+              data-desc="Branching colonies of Acropora cervicornis secreting aragonite skeletons that create critical three-dimensional structural architecture for reef organisms.">
+        <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1000&q=80" alt="Coral reef structures" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Staghorn Coral Thicket</h4>
+          <span>Category: Coral Reef Systems &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 10 -->
+      <figure class="gallery-item" data-category="reef" data-index="9"
+              data-title="Tropical Schooling Anthias"
+              data-photographer="Red Sea Marine Biosphere Expedition"
+              data-habitat="Reef Drop-Off Wall"
+              data-desc="Densely aggregated schools of Pseudanthias squamipinnis feeding on tidal currents rich in zooplankton along steep coral drop-offs.">
+        <img src="https://images.unsplash.com/photo-1534043464124-3be32fe00099?auto=format&fit=crop&w=1000&q=80" alt="School of vibrant coral fish" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Schooling Reef Fish</h4>
+          <span>Category: Coral Reef Systems &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 11 -->
+      <figure class="gallery-item" data-category="megafauna" data-index="10"
+              data-title="Emperor Penguin Icepack Apnea Dive"
+              data-photographer="Antarctic Polar Ecology Group"
+              data-habitat="Southern Ocean Pack Ice"
+              data-desc="Aptenodytes forsteri navigating beneath fast ice, storing extraordinary quantities of oxygen in myoglobin-rich muscle tissue during deep feeding plunges.">
+        <img src="https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&fit=crop&w=1000&q=80" alt="Emperor penguin colony" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Emperor Penguin Polar Dive</h4>
+          <span>Category: Pelagic Megafauna &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+
+      <!-- Image 12 -->
+      <figure class="gallery-item" data-category="abyss" data-index="11"
+              data-title="Hydrothermal Chimney Mineral Sulfides"
+              data-photographer="Deep Submergence Vehicle Alvin"
+              data-habitat="East Pacific Rise (2,600m)"
+              data-desc="Superheated 380&deg;C mineral-rich fluids crystallizing upon contact with 2&deg;C bottom seawater, encrusted with symbiotic Alvinella pompejana worms.">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Ocean deep waters" loading="lazy">
+        <figcaption class="gallery-caption-overlay">
+          <h4>Hydrothermal Mineral Spire</h4>
+          <span>Category: Deep Oceanic &bull; Click to Expand</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 2: Subsea Optical Technical Specifications Table -->
+    <section id="opticsTable" style="margin-top: 4rem; margin-bottom: 3.5rem;">
+      <h2>Underwater Photogrammetry &amp; Optical Attenuation</h2>
+      <p>
+        Water attenuates light selectively by wavelength. Red spectrum wavelengths (&lambda; &approx; 650&ndash;700 nm) are absorbed within the first five meters of water, whereas blue-cyan wavelengths (&lambda; &approx; 450&ndash;490 nm) penetrate deepest. Scientific marine imaging necessitates color-correcting strobe systems and pressure-rated optical domes.
+      </p>
+
+      <div class="table-responsive">
+        <table class="ocean-table">
+          <caption>Table 4.1: Sub-Surface Light Transmission and Photographic Calibration Parameters</caption>
+          <thead>
+            <tr>
+              <th scope="col">Light Spectrum Band</th>
+              <th scope="col">Wavelength (&lambda;)</th>
+              <th scope="col">50% Absorption Depth</th>
+              <th scope="col">Visual Perceptual Shift</th>
+              <th scope="col">Photographic Compensation Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Red Spectrum</strong></td>
+              <td>650 &ndash; 750 nm</td>
+              <td>3.5 meters</td>
+              <td>Appears muted black/gray past 5m</td>
+              <td>High-CRI flash strobes (&gt;90 CRI, 5000K)</td>
+            </tr>
+            <tr>
+              <td><strong>Orange / Yellow</strong></td>
+              <td>580 &ndash; 640 nm</td>
+              <td>10.0 meters</td>
+              <td>Mutes to dull olive and brown</td>
+              <td>Physical UR/Pro red filters, custom white balance</td>
+            </tr>
+            <tr>
+              <td><strong>Green Spectrum</strong></td>
+              <td>500 &ndash; 570 nm</td>
+              <td>35.0 meters</td>
+              <td>Dominant in coastal/turbid waters</td>
+              <td>Magenta optical correction filters</td>
+            </tr>
+            <tr>
+              <td><strong>Blue / Cyan</strong></td>
+              <td>420 &ndash; 490 nm</td>
+              <td>120.0 meters</td>
+              <td>Deep ocean background monochrome</td>
+              <td>High-gain dual LED continuous arrays</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Lightbox Modal (DOM manipulated with JS) -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Underwater Image Viewer">
+    <!-- Close button -->
+    <button class="lightbox-close-btn" id="lightboxCloseBtn" title="Close Lightbox (Esc)">&times;</button>
+
+    <!-- Navigation buttons -->
+    <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="Previous Image (Left Arrow)">&#10094;</button>
+    <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="Next Image (Right Arrow)">&#10095;</button>
+
+    <div class="lightbox-content-box">
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImage" src="" alt="Expanded underwater marine view">
+      </div>
+      <div class="lightbox-info-bar">
+        <div>
+          <h3 id="lightboxTitle" style="color: white; margin: 0; font-size: 1.8rem;">Specimen Title</h3>
+          <p id="lightboxDesc" style="color: var(--color-surface); margin: 0.4rem 0 0 0; font-size: 1.25rem;"></p>
+          <div style="font-size: 1.15rem; color: #94a3b8; margin-top: 0.3rem;">
+            <span>Source: <strong id="lightboxSource" style="color: white;">NOAA</strong></span> &bull; 
+            <span>Habitat: <strong id="lightboxHabitat" style="color: white;">Coral Reef</strong></span>
+          </div>
+        </div>
+        <div style="font-size: 1.3rem; font-weight: bold; color: var(--color-cyan); min-width: 90px; text-align: right;" id="lightboxCounter">
+          1 / 12
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Semantic Footer -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Ocean Life Discovery</h4>
+        <p>
+          Underwater optical gallery and marine photogrammetry registry documenting marine taxa across bathymetric zones.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Interconnected Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">&rarr; Home Portal</a></li>
+          <li><a href="species.html">&rarr; Marine Species Catalog</a></li>
+          <li><a href="ecosystems.html">&rarr; Ocean Ecosystems</a></li>
+          <li><a href="gallery.html">&rarr; Underwater Galleries</a></li>
+          <li><a href="awareness.html">&rarr; Awareness &amp; Action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Optical Scientific Methods</h4>
+        <p>
+          Documented under natural irradiance and calibrated sub-sea strobes, preserving scientific color accuracy without manipulative post-filtering.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ocean Life Discovery Project. Lab Project Module 4: Underwater Optical Registry &amp; Lightbox.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

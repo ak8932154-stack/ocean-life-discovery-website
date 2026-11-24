@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ocean Ecosystems &amp; Interactive Bathymetric Depth Simulator - Explore marine biomes, coral reefs, kelp forests, and abyssal zones.">
+  <title>Ocean Ecosystems &amp; Depth Zones | Ocean Life Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Academic Notice Header -->
+  <div class="top-notice-bar">
+    <div>
+      <span class="notice-badge">Ecology Lab</span>
+      <span>Ocean Biomes, Benthic Strata &amp; Hydrostatic Pressure Modeling</span>
+    </div>
+    <div>
+      <span>Bathymetric Oceanography &bull; 2026</span>
+    </div>
+  </div>
+
+  <!-- Primary Semantic Header & Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <span class="brand-icon">🌊</span>
+        <div class="brand-title">
+          <h1>Ocean Life Discovery</h1>
+          <span class="brand-subtitle">Marine Biodiversity &amp; Oceanography</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">&#9776;</button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><span>🏠</span> Home</a></li>
+          <li><a href="species.html"><span>🐋</span> Marine Species</a></li>
+          <li><a href="ecosystems.html" class="active"><span>🌿</span> Ocean Ecosystems</a></li>
+          <li><a href="gallery.html"><span>📷</span> Underwater Galleries</a></li>
+          <li><a href="awareness.html"><span>🛡️</span> Awareness &amp; Action</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="page-hero">
+    <div class="page-hero-content">
+      <h1>Ocean Ecosystems &amp; Bathymetric Profiles</h1>
+      <p>
+        Marine ecosystems are dynamic complexes of biological communities interacting with their abiotic chemical and physical environs. From nutrient-dense coastal kelp canopies to hydrothermal sulfide chimneys, marine life has adapted to varying intensities of irradiance, salinities, hydrostatic pressures, and temperatures.
+      </p>
+      <div class="hero-actions">
+        <a href="#depthSimulator" class="btn btn-primary"><span>🎚️</span> Interactive Depth Simulator</a>
+        <a href="#biomeProfiles" class="btn btn-secondary"><span>🌿</span> Explore Major Biomes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Interactive Depth Zone Simulator (Core Interactive Feature #3) -->
+    <section id="depthSimulator" class="section-header">
+      <h2>Interactive Bathymetric Depth &amp; Pressure Simulator</h2>
+      <p>
+        Manipulate the bathymetric depth slider below to observe continuous DOM updates detailing real-time changes in ocean hydrostatic pressure, solar irradiance attenuation, ambient temperature, and biological adaptations.
+      </p>
+    </section>
+
+    <!-- Simulator Container -->
+    <section class="depth-simulator" id="depthSimulatorBox">
+      <div class="simulator-controls">
+        <label for="depthSlider" style="color: white; font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">
+          Select Bathymetric Depth Level (0 to 11,000 meters):
+        </label>
+        <div class="depth-slider-container">
+          <input type="range" id="depthSlider" min="0" max="11000" step="50" value="0" aria-label="Ocean depth slider in meters">
+          <div class="depth-value-badge" id="depthValueDisplay">0 m</div>
+        </div>
+
+        <div style="display: flex; gap: 0.8rem; margin-top: 1.2rem; flex-wrap: wrap;">
+          <button class="btn btn-sm btn-secondary depth-preset-btn" data-depth="50">Sunlight Zone (50m)</button>
+          <button class="btn btn-sm btn-secondary depth-preset-btn" data-depth="600">Twilight Zone (600m)</button>
+          <button class="btn btn-sm btn-secondary depth-preset-btn" data-depth="2500">Midnight Zone (2,500m)</button>
+          <button class="btn btn-sm btn-secondary depth-preset-btn" data-depth="5000">Abyss (5,000m)</button>
+          <button class="btn btn-sm btn-secondary depth-preset-btn" data-depth="10920">Mariana Trench (10,920m)</button>
+        </div>
+      </div>
+
+      <!-- Real-Time Readout Grid -->
+      <div class="depth-readout-grid">
+        <div class="readout-card">
+          <strong>Oceanographic Zone</strong>
+          <span id="readoutZone">Epipelagic (Sunlight)</span>
+          <p id="readoutZoneDesc">The euphotic zone receiving abundant sunlight driving planetary photosynthesis.</p>
+        </div>
+
+        <div class="readout-card">
+          <strong>Hydrostatic Pressure</strong>
+          <span id="readoutPressure">1.0 atm (14.7 psi)</span>
+          <p>Increases by approximately one atmosphere every 10 meters of descent.</p>
+        </div>
+
+        <div class="readout-card">
+          <strong>Solar Irradiance</strong>
+          <span id="readoutLight">100% (Complete)</span>
+          <p id="readoutLightDesc">Supports macro-algae, coral calcification, and surface food webs.</p>
+        </div>
+
+        <div class="readout-card">
+          <strong>Ambient Temperature</strong>
+          <span id="readoutTemp">22.5 &deg;C</span>
+          <p id="readoutTempDesc">Warm mixed epipelagic layer governed by atmospheric solar heating.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.8rem; background-color: rgba(6, 30, 56, 0.85); padding: 1.5rem; border-radius: var(--radius-sm); border-left: 4px solid var(--color-cyan);">
+        <h4 style="color: var(--color-foam); margin-bottom: 0.4rem;">Adapted Specimen &amp; Ecological Dynamics:</h4>
+        <p id="readoutOrganisms" style="color: white; margin: 0; font-size: 1.3rem;">
+          Phytoplankton, Green Sea Turtles, Coral Polyps, Flying Fish, Bottlenose Dolphins, Pelagic Tuna.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Major Marine Biomes (Cards with Semantic Articles) -->
+    <section id="biomeProfiles" class="section-header" style="margin-top: 4rem;">
+      <h2>Major Planetary Marine Biomes</h2>
+      <p>
+        The global ocean encompasses five distinct biomes, each presenting unique biogeochemical dynamics, trophic energy transfers, and habitat-forming organisms.
+      </p>
+    </section>
+
+    <div class="grid-features">
+      <!-- Biome 1 -->
+      <article class="feature-card">
+        <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=600&q=80" alt="Tropical Coral Reef" style="height: 160px; object-fit: cover; margin-bottom: 1.2rem;">
+        <h3>1. Coral Reef Ecosystems</h3>
+        <p>
+          Often termed the rainforests of the ocean, coral reefs are complex biogenic structures formed by calcium carbonate-secreting scleractinian colonies in oligotrophic waters. Through endosymbiotic zooxanthellae dinoflagellates, corals attain rapid calcification rates, supporting over one-quarter of all documented marine taxa while covering less than 0.1% of the seafloor.
+        </p>
+        <ul style="padding-left: 1.8rem; font-size: 1.25rem; margin-top: 0.8rem; line-height: 1.6;">
+          <li><strong>Dominant Producers:</strong> Zooxanthellae &amp; Turf Algae</li>
+          <li><strong>Keystone Species:</strong> Parrotfish, Staghorn Coral</li>
+          <li><strong>Critical Threat:</strong> Thermal Bleaching &amp; Acidification</li>
+        </ul>
+      </article>
+
+      <!-- Biome 2 -->
+      <article class="feature-card">
+        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=600&q=80" alt="Open Ocean Pelagic Waters" style="height: 160px; object-fit: cover; margin-bottom: 1.2rem;">
+        <h3>2. Open Pelagic Ocean</h3>
+        <p>
+          The vast pelagic realm constitutes the largest contiguous living habitat on Earth, extending across immense horizontal expanses away from coastal continental margins. Microscopic photosynthetic diatoms and dinoflagellates form the base of an extensive open-water trophic chain, supporting rapid pelagic predators such as billfish, cetaceans, and oceanic sharks.
+        </p>
+        <ul style="padding-left: 1.8rem; font-size: 1.25rem; margin-top: 0.8rem; line-height: 1.6;">
+          <li><strong>Dominant Producers:</strong> Single-celled Phytoplankton</li>
+          <li><strong>Keystone Species:</strong> Pelagic Krill, Blue Whales</li>
+          <li><strong>Critical Threat:</strong> Industrial Bycatch &amp; Microplastics</li>
+        </ul>
+      </article>
+
+      <!-- Biome 3 -->
+      <article class="feature-card">
+        <img src="https://images.unsplash.com/photo-1544551763-8dd44758c2dd?auto=format&fit=crop&w=600&q=80" alt="Underwater Kelp Forest" style="height: 160px; object-fit: cover; margin-bottom: 1.2rem;">
+        <h3>3. Giant Kelp Forests</h3>
+        <p>
+          Temperate shallow rocky coasts support towering giant kelp (<em>Macrocystis pyrifera</em>) canopies growing up to thirty centimeters daily. These underwater forests dissipate surging wave energy, buffer coastal shorelines from storm erosion, and provide multi-tiered habitat layers occupied by sea otters, rockfish, abalone, and sea urchins.
+        </p>
+        <ul style="padding-left: 1.8rem; font-size: 1.25rem; margin-top: 0.8rem; line-height: 1.6;">
+          <li><strong>Dominant Producers:</strong> Macrocystis pyrifera</li>
+          <li><strong>Keystone Species:</strong> Sea Otters, Spiny Lobsters</li>
+          <li><strong>Critical Threat:</strong> Marine Heatwaves &amp; Urchin Barrens</li>
+        </ul>
+      </article>
+
+      <!-- Biome 4 -->
+      <article class="feature-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Deep Sea Abyssal Plain" style="height: 160px; object-fit: cover; margin-bottom: 1.2rem;">
+        <h3>4. Deep Ocean Abyss &amp; Vents</h3>
+        <p>
+          The deep sea represents a perpetually lightless biosphere characterized by near-freezing temperatures and crushing hydrostatic pressures. Around volcanic hydrothermal fissures, specialized chemotrophic sulfur-oxidizing bacteria replace solar photons with geothermal hydrogen sulfide, powering thriving oases of giant tube worms, blind shrimp, and barophilic fauna.
+        </p>
+        <ul style="padding-left: 1.8rem; font-size: 1.25rem; margin-top: 0.8rem; line-height: 1.6;">
+          <li><strong>Dominant Producers:</strong> Chemosynthetic Archaea &amp; Bacteria</li>
+          <li><strong>Keystone Species:</strong> Riftia pachyptila (Tube Worms)</li>
+          <li><strong>Critical Threat:</strong> Deep-Sea Seabed Mineral Mining</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Section 3: Comparative Ecology Table -->
+    <section style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
+      <h2>Comparative Matrix of Marine Biomes</h2>
+      <p>
+        This empirical matrix compares the biological, physical, and ecological metrics characterizing Earth's major aquatic systems.
+      </p>
+
+      <div class="table-responsive">
+        <table class="ocean-table">
+          <caption>Table 3.1: Comparative Ecological and Environmental Parameters Across Marine Biomes</caption>
+          <thead>
+            <tr>
+              <th scope="col">Ecosystem Biome</th>
+              <th scope="col">Mean Salinity</th>
+              <th scope="col">Primary Energy Basis</th>
+              <th scope="col">Biodiversity Index</th>
+              <th scope="col">Dominant Anthropogenic Stressor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tropical Coral Reefs</strong></td>
+              <td>34 &ndash; 37 PSU</td>
+              <td>Solar Photosynthesis (Zooxanthellae)</td>
+              <td>Extremely High (&gt;25% marine taxa)</td>
+              <td>Thermal Bleaching, Ocean Acidification</td>
+            </tr>
+            <tr>
+              <td><strong>Coastal Kelp Forests</strong></td>
+              <td>32 &ndash; 35 PSU</td>
+              <td>Solar Photosynthesis (Brown Algae)</td>
+              <td>High (Multi-layered canopy)</td>
+              <td>Marine Heatwaves, Overfishing of Otters</td>
+            </tr>
+            <tr>
+              <td><strong>Mangrove Estuaries</strong></td>
+              <td>10 &ndash; 35 PSU (Brackish)</td>
+              <td>Photosynthesis (Halophytic Trees)</td>
+              <td>High (Critical nursery grounds)</td>
+              <td>Aquaculture Conversion, Coastal Clearing</td>
+            </tr>
+            <tr>
+              <td><strong>Open Pelagic Ocean</strong></td>
+              <td>34 &ndash; 36 PSU</td>
+              <td>Phytoplankton Bloom Photosynthesis</td>
+              <td>Moderate to Low (Dispersed)</td>
+              <td>Overfishing, Pelagic Longlines, Plastics</td>
+            </tr>
+            <tr>
+              <td><strong>Hydrothermal Abyssal Vents</strong></td>
+              <td>34.5 &ndash; 35 PSU</td>
+              <td>Hydrogen Sulfide Chemosynthesis</td>
+              <td>High Endemism (&gt;85% unique species)</td>
+              <td>Deep-Sea Polymetallic Nodule Extraction</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Definition List for Technical Oceanography Terms -->
+    <section style="background-color: var(--bg-card); border: 1px solid var(--border-light); padding: 2rem; border-radius: var(--radius-md);">
+      <h3>Key Oceanographic Terminology Glossary</h3>
+      <dl style="font-size: 1.3rem; line-height: 1.8; margin-top: 1rem;">
+        <dt style="font-weight: bold; color: var(--color-deep-ocean); margin-top: 0.8rem;">Euphotic Zone</dt>
+        <dd style="text-align: justify; margin-left: 1.5rem; margin-bottom: 0.8rem;">
+          The upper layer of the water column in an ocean or lake receiving adequate sunlight to support net positive biological photosynthesis.
+        </dd>
+
+        <dt style="font-weight: bold; color: var(--color-deep-ocean); margin-top: 0.8rem;">Chemosynthesis</dt>
+        <dd style="text-align: justify; margin-left: 1.5rem; margin-bottom: 0.8rem;">
+          The biological conversion of one or more carbon-containing molecules and nutrients into organic matter using the oxidation of inorganic molecules (such as hydrogen gas or hydrogen sulfide) rather than sunlight.
+        </dd>
+
+        <dt style="font-weight: bold; color: var(--color-deep-ocean); margin-top: 0.8rem;">Hydrostatic Pressure</dt>
+        <dd style="text-align: justify; margin-left: 1.5rem; margin-bottom: 0.8rem;">
+          The pressure exerted by a fluid at equilibrium at any given point within the fluid, due to the force of gravity. In seawater, pressure increases by 1 atmosphere (101.3 kPa) per 10 meters of water depth.
+        </dd>
+
+        <dt style="font-weight: bold; color: var(--color-deep-ocean); margin-top: 0.8rem;">Barophile (Piezophile)</dt>
+        <dd style="text-align: justify; margin-left: 1.5rem; margin-bottom: 0.8rem;">
+          An organism that thrives at high pressures, such as deep sea bacteria and archaea adapted to survive hydrostatic pressures surpassing several hundred atmospheres.
+        </dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Ocean Life Discovery</h4>
+        <p>
+          Marine ecosystems analysis and interactive bathymetric pressure simulation developed for empirical laboratory demonstration.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Interconnected Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">&rarr; Home Portal</a></li>
+          <li><a href="species.html">&rarr; Marine Species Catalog</a></li>
+          <li><a href="ecosystems.html">&rarr; Ocean Ecosystems</a></li>
+          <li><a href="gallery.html">&rarr; Underwater Galleries</a></li>
+          <li><a href="awareness.html">&rarr; Awareness &amp; Action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Physical Oceanography</h4>
+        <p>
+          Modeling hydrostatic equations: P = P_surface + &rho; * g * h, simulating oceanic stratification across the global bathypelagic column.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ocean Life Discovery Project. Lab Project Module 3: Ocean Ecosystems &amp; Depth Simulation.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

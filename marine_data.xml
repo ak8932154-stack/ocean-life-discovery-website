@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Ocean Life Discovery Project - Well-Formed XML Database
+  Demonstrating Hierarchical Marine Biological Data Structure
+-->
+<oceanLifeCatalog version="2.4" lastUpdated="2026-11-23">
+  <metadata>
+    <title>Global Ocean Life &amp; Marine Species Directory</title>
+    <institution>Marine Biology Discovery Laboratory</institution>
+    <totalRecords>10</totalRecords>
+    <dataStandard>OBIS-Compliant Taxonomic Standard</dataStandard>
+  </metadata>
+
+  <speciesList>
+    <species id="SP001">
+      <commonName>Blue Whale</commonName>
+      <scientificName>Balaenoptera musculus</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Mammalia</class>
+        <order>Artiodactyla</order>
+        <family>Balaenopteridae</family>
+      </taxonomy>
+      <habitat>Open Pelagic Waters and Polar Oceans</habitat>
+      <depthZone minMeters="0" maxMeters="500">Epipelagic &amp; Mesopelagic</depthZone>
+      <conservationStatus code="EN">Endangered</conservationStatus>
+      <diet>Carnivore (Zooplankton / Antarctic Krill)</diet>
+      <lifespan years="80-90">80 to 90 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">29.9</averageLength>
+        <averageWeight unit="metric-tons">150.0</averageWeight>
+        <coloration>Mottled blue-gray with pale underside</coloration>
+      </physicalAttributes>
+      <description>The blue whale is the largest known animal ever to have existed on Earth, consuming up to 4 metric tons of krill per day during feeding season.</description>
+      <primaryThreats>Ship strikes, commercial ocean noise, climate change affecting krill density, and marine plastic debris.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP002">
+      <commonName>Green Sea Turtle</commonName>
+      <scientificName>Chelonia mydas</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Reptilia</class>
+        <order>Testudines</order>
+        <family>Cheloniidae</family>
+      </taxonomy>
+      <habitat>Tropical and Subtropical Coastal Waters &amp; Coral Reefs</habitat>
+      <depthZone minMeters="0" maxMeters="110">Epipelagic Coastal</depthZone>
+      <conservationStatus code="EN">Endangered</conservationStatus>
+      <diet>Herbivore (Seagrasses and Marine Algae)</diet>
+      <lifespan years="60-70">60 to 70 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">1.2</averageLength>
+        <averageWeight unit="kg">160.0</averageWeight>
+        <coloration>Olive-green to dark brown smooth carapace</coloration>
+      </physicalAttributes>
+      <description>Named for the greenish color of its subcutaneous fat, the green sea turtle migrates thousands of miles between foraging habitats and natal nesting beaches.</description>
+      <primaryThreats>Fisheries bycatch, coastal development destroying nesting grounds, boat strikes, and marine plastic ingestion.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP003">
+      <commonName>Clown Anemonefish</commonName>
+      <scientificName>Amphiprion ocellaris</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Actinopterygii</class>
+        <order>Perciformes</order>
+        <family>Pomacentridae</family>
+      </taxonomy>
+      <habitat>Tropical Indo-Pacific Shallow Coral Reefs</habitat>
+      <depthZone minMeters="1" maxMeters="15">Shallow Epipelagic</depthZone>
+      <conservationStatus code="LC">Least Concern</conservationStatus>
+      <diet>Omnivore (Plankton, Copepods, and Algae)</diet>
+      <lifespan years="6-10">6 to 10 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="cm">11.0</averageLength>
+        <averageWeight unit="grams">250.0</averageWeight>
+        <coloration>Bright orange body with three distinct white vertical stripes</coloration>
+      </physicalAttributes>
+      <description>Possesses a mutualistic relationship with sea anemones; a protective mucus coating shields the fish from stinging nematocysts while providing territorial defense.</description>
+      <primaryThreats>Coral bleaching, destructive aquarium harvesting, and loss of sea anemone symbionts.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP004">
+      <commonName>Giant Oceanic Manta Ray</commonName>
+      <scientificName>Mobula birostris</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Chondrichthyes</class>
+        <order>Myliobatiformes</order>
+        <family>Mobulidae</family>
+      </taxonomy>
+      <habitat>Tropical and Subtropical Pelagic Oceans &amp; Offshore Seamounts</habitat>
+      <depthZone minMeters="0" maxMeters="1000">Epipelagic to Bathypelagic</depthZone>
+      <conservationStatus code="EN">Endangered</conservationStatus>
+      <diet>Filter Feeder (Planktonic Crustaceans and Small Fish)</diet>
+      <lifespan years="40-50">40 to 50 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">7.0</averageLength>
+        <averageWeight unit="kg">2000.0</averageWeight>
+        <coloration>Dorsal jet black with chevron markings and pale ventral spots</coloration>
+      </physicalAttributes>
+      <description>Boasting the largest brain-to-body mass ratio of all cold-blooded fish, giant manta rays navigate open ocean currents with triangular pectoral fins spanning up to 7 meters.</description>
+      <primaryThreats>Targeted fishing for gill plates, entanglement in ghost gear, and microplastic ingestion.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP005">
+      <commonName>Giant Pacific Octopus</commonName>
+      <scientificName>Enteroctopus dofleini</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Mollusca</phylum>
+        <class>Cephalopoda</class>
+        <order>Octopoda</order>
+        <family>Enteroctopodidae</family>
+      </taxonomy>
+      <habitat>Cool North Pacific Coastal Benthic Zones &amp; Kelp Forests</habitat>
+      <depthZone minMeters="0" maxMeters="750">Subtidal to Bathyal</depthZone>
+      <conservationStatus code="LC">Least Concern (Data Deficient)</conservationStatus>
+      <diet>Carnivore (Crabs, Clams, Scallops, and Rockfish)</diet>
+      <lifespan years="3-5">3 to 5 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">4.3</averageLength>
+        <averageWeight unit="kg">50.0</averageWeight>
+        <coloration>Reddish-pink with chromatic camouflage chromatophores</coloration>
+      </physicalAttributes>
+      <description>The largest and longest-lived octopus species, possessing three hearts, blue hemocyanin copper-based blood, and remarkable cognitive problem-solving abilities.</description>
+      <primaryThreats>Water warming events, commercial trapping bycatch, ocean acidification, and benthic pollution.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP006">
+      <commonName>Deep Sea Anglerfish</commonName>
+      <scientificName>Melanocetus johnsonii</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Actinopterygii</class>
+        <order>Lophiiformes</order>
+        <family>Melanocetidae</family>
+      </taxonomy>
+      <habitat>Midnight and Twilight Bathypelagic Abyssal Depths</habitat>
+      <depthZone minMeters="1000" maxMeters="3000">Bathypelagic</depthZone>
+      <conservationStatus code="LC">Least Concern</conservationStatus>
+      <diet>Carnivore (Deep-sea Fish and Crustaceans)</diet>
+      <lifespan years="15-20">15 to 20 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="cm">18.0</averageLength>
+        <averageWeight unit="kg">0.5</averageWeight>
+        <coloration>Pitch black to dark brown light-absorbing skin</coloration>
+      </physicalAttributes>
+      <description>Survives under thousands of pounds of hydrostatic pressure; female anglerfish wield a modified dorsal spine (illicium) tipped with a bioluminescent bacterial lure (esca) to attract prey.</description>
+      <primaryThreats>Deep-sea mineral mining, underwater noise disturbance, and microplastic contamination in the water column.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP007">
+      <commonName>Moon Jellyfish</commonName>
+      <scientificName>Aurelia aurita</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Cnidaria</phylum>
+        <class>Scyphozoa</class>
+        <order>Semaeostomeae</order>
+        <family>Ulmaridae</family>
+      </taxonomy>
+      <habitat>Coastal Inshore Waters, Bays, and Harbors</habitat>
+      <depthZone minMeters="0" maxMeters="200">Epipelagic Coastal</depthZone>
+      <conservationStatus code="LC">Least Concern</conservationStatus>
+      <diet>Carnivore (Plankton, Mollusk Larvae, and Fish Eggs)</diet>
+      <lifespan years="1-2">8 to 12 months</lifespan>
+      <physicalAttributes>
+        <averageLength unit="cm">30.0</averageLength>
+        <averageWeight unit="grams">180.0</averageWeight>
+        <coloration>Translucent bell with four horseshoe-shaped gonads</coloration>
+      </physicalAttributes>
+      <description>Composed of over 95 percent water, moon jellies drift with tidal currents, using stinging cnidocytes on delicate marginal tentacles to sweep microplankton toward their oral arms.</description>
+      <primaryThreats>Plastic bag ingestion by marine predators mistaking jellies for food, temperature spikes, and chemical runoff.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1544551763-8dd44758c2dd?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP008">
+      <commonName>Great White Shark</commonName>
+      <scientificName>Carcharodon carcharias</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Chondrichthyes</class>
+        <order>Lamniformes</order>
+        <family>Lamnidae</family>
+      </taxonomy>
+      <habitat>Temperate and Subtropical Coastal Waters</habitat>
+      <depthZone minMeters="0" maxMeters="1200">Epipelagic &amp; Mesopelagic</depthZone>
+      <conservationStatus code="VU">Vulnerable</conservationStatus>
+      <diet>Apex Carnivore (Marine Mammals, Large Pelagic Fish, and Rays)</diet>
+      <lifespan years="70">Up to 70 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">4.9</averageLength>
+        <averageWeight unit="kg">1100.0</averageWeight>
+        <coloration>Dark slate gray dorsum with stark white countershading</coloration>
+      </physicalAttributes>
+      <description>Apex predator equipped with ampullae of Lorenzini electroreceptors capable of detecting microvolt bioelectric fields emitted by prey thousands of meters away.</description>
+      <primaryThreats>Commercial shark finning, gillnet entanglement, targeted trophy hunting, and habitat degradation.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP009">
+      <commonName>Emperor Penguin</commonName>
+      <scientificName>Aptenodytes forsteri</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Chordata</phylum>
+        <class>Aves</class>
+        <order>Sphenisciformes</order>
+        <family>Spheniscidae</family>
+      </taxonomy>
+      <habitat>Antarctic Pack Ice and Southern Ocean</habitat>
+      <depthZone minMeters="0" maxMeters="535">Epipelagic Diving Hunter</depthZone>
+      <conservationStatus code="NT">Near Threatened</conservationStatus>
+      <diet>Carnivore (Antarctic Silverfish, Krill, and Squid)</diet>
+      <lifespan years="15-20">15 to 20 years</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">1.2</averageLength>
+        <averageWeight unit="kg">38.0</averageWeight>
+        <coloration>Deep black plumage on back with bright golden auricular patches</coloration>
+      </physicalAttributes>
+      <description>The tallest and heaviest of all living penguin species, adapted with dense four-layered plumage, sub-dermal blubber, and the ability to dive deeper than 500 meters into sub-zero waters.</description>
+      <primaryThreats>Antarctic sea ice loss due to global heating, shifts in krill population, and extreme blizzard mortality.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+
+    <species id="SP010">
+      <commonName>Staghorn Coral</commonName>
+      <scientificName>Acropora cervicornis</scientificName>
+      <taxonomy>
+        <kingdom>Animalia</kingdom>
+        <phylum>Cnidaria</phylum>
+        <class>Anthozoa</class>
+        <order>Scleractinia</order>
+        <family>Acroporidae</family>
+      </taxonomy>
+      <habitat>Shallow Tropical Reef Crests and Fore-Reefs</habitat>
+      <depthZone minMeters="0" maxMeters="30">Shallow Reef Crest</depthZone>
+      <conservationStatus code="CR">Critically Endangered</conservationStatus>
+      <diet>Symbiotic (Photosynthetic Zooxanthellae and Suspended Organic Particulates)</diet>
+      <lifespan years="Centuries">Centuries (Colonial growth)</lifespan>
+      <physicalAttributes>
+        <averageLength unit="meters">2.0</averageLength>
+        <averageWeight unit="kg">Variable colonial structure</averageWeight>
+        <coloration>Golden tan to light olive with luminous pale growth tips</coloration>
+      </physicalAttributes>
+      <description>Keystone reef-building stony coral with intricate branching structures that resemble deer antlers, providing critical protective nursery habitats for hundreds of reef fish species.</description>
+      <primaryThreats>Ocean warming causing mass coral bleaching, ocean acidification, white band disease outbreaks, and agricultural sedimentation.</primaryThreats>
+      <image>https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image>
+    </species>
+  </speciesList>
+</oceanLifeCatalog>
