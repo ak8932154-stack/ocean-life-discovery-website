@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marine Conservation Awareness &amp; Action Portal - Ocean threat statistics, interactive eco-quiz, and validated conservation pledge form.">
+  <title>Awareness &amp; Conservation Action | Ocean Life Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Academic Notice Header -->
+  <div class="top-notice-bar">
+    <div>
+      <span class="notice-badge">Conservation Lab</span>
+      <span>Oceanic Threat Mitigation, Citizen Science &amp; Global Awareness</span>
+    </div>
+    <div>
+      <span>UN Sustainable Development Goal 14: Life Below Water</span>
+    </div>
+  </div>
+
+  <!-- Primary Semantic Header & Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <span class="brand-icon">🌊</span>
+        <div class="brand-title">
+          <h1>Ocean Life Discovery</h1>
+          <span class="brand-subtitle">Marine Biodiversity &amp; Oceanography</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">&#9776;</button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><span>🏠</span> Home</a></li>
+          <li><a href="species.html"><span>🐋</span> Marine Species</a></li>
+          <li><a href="ecosystems.html"><span>🌿</span> Ocean Ecosystems</a></li>
+          <li><a href="gallery.html"><span>📷</span> Underwater Galleries</a></li>
+          <li><a href="awareness.html" class="active"><span>🛡️</span> Awareness &amp; Action</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="page-hero">
+    <div class="page-hero-content">
+      <h1>Marine Conservation Awareness &amp; Action</h1>
+      <p>
+        The planetary ocean faces unprecedented cumulative stressors from industrial overexploitation, microplastic pollution, thermal bleaching, and anthropogenic acidification. Mitigating these systemic crises demands empirical scientific analysis, rigorous policy frameworks, and committed individual citizen stewardship.
+      </p>
+      <div class="hero-actions">
+        <a href="#pledgeFormSection" class="btn btn-coral"><span>📝</span> Submit Conservation Pledge</a>
+        <a href="#oceanQuizSection" class="btn btn-primary"><span>💡</span> Test Your Ocean Literacy</a>
+        <a href="#threatsTableSection" class="btn btn-secondary"><span>📊</span> Threat Matrix</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Section 1: Major Planetary Ocean Threats -->
+    <section class="section-header">
+      <h2>Anthropogenic Oceanic Pressures</h2>
+      <p>
+        Contemporary oceanographic research identifies four overarching anthropogenic drivers responsible for accelerating biodiversity declines across marine biomes.
+      </p>
+    </section>
+
+    <div class="grid-features">
+      <article class="feature-card">
+        <div class="feature-icon">🧴</div>
+        <h3>1. Plastic &amp; Microplastic Influx</h3>
+        <p>
+          Over eleven million metric tons of synthetic plastic enter planetary waterways each year. Mechanical and ultraviolet fragmentation breaks macrosynthetics into micro- and nanoplastics (&lt;5 mm), which adsorb persistent organic pollutants and bioaccumulate across all marine trophic strata, from benthic copepods to apex cetaceans.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🧪</div>
+        <h3>2. Ocean Acidification</h3>
+        <p>
+          Seawater absorbs approximately thirty percent of anthropogenic atmospheric carbon dioxide emissions. Dissolved CO<sub>2</sub> reacts to form carbonic acid (H<sub>2</sub>CO<sub>3</sub>), depleting free carbonate ions (CO<sub>3</sub><sup>2-</sup>) essential for calcifying organisms including hermatypic corals, pteropods, and mollusks to construct shells.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🎣</div>
+        <h3>3. Commercial Overexploitation</h3>
+        <p>
+          Industrial pelagic fishing fleets utilize destructive bottom trawling and drifting longlines stretching dozens of nautical miles. Over one-third of assessed commercial marine fish stocks are presently extracted beyond biologically sustainable limits, with non-target marine turtles, seabirds, and cetaceans discarded as bycatch.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🌡️</div>
+        <h3>4. Thermal Bleaching &amp; Deoxygenation</h3>
+        <p>
+          Anthropogenic warming has driven marine heatwaves that expel mutualistic zooxanthellae dinoflagellates from coral tissues, triggering mass bleaching mortality. Concurrently, warmer ocean waters exhibit reduced gas solubility and enhanced stratification, accelerating global sub-surface oxygen minimum zones.
+        </p>
+      </article>
+    </div>
+
+    <!-- Section 2: Global Marine Threat Matrix Table -->
+    <section id="threatsTableSection" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
+      <h2>Global Threat Impact &amp; Regulatory Frameworks</h2>
+      <p>
+        The table below provides empirical statistics on primary marine threats, their ecological manifestation, and international convention treaties governing their mitigation.
+      </p>
+
+      <div class="table-responsive">
+        <table class="ocean-table">
+          <caption>Table 5.1: Global Anthropogenic Threat Assessment, Impact Magnitudes &amp; International Governance</caption>
+          <thead>
+            <tr>
+              <th scope="col">Anthropogenic Threat</th>
+              <th scope="col">Annual Rate / Flux</th>
+              <th scope="col">Trophic Vulnerability</th>
+              <th scope="col">Ecological Consequence</th>
+              <th scope="col">International Treaty / Policy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Marine Plastic Debris</strong></td>
+              <td>11&ndash;14 Million Metric Tons</td>
+              <td>Plankton, Seabirds, Turtles</td>
+              <td>Gastrointestinal impaction, toxin transfer</td>
+              <td>UN Global Plastics Treaty (INC)</td>
+            </tr>
+            <tr>
+              <td><strong>Ocean Acidification</strong></td>
+              <td>pH decline of 0.1 units (30% &uarr;)</td>
+              <td>Calcifiers (Corals, Pteropods)</td>
+              <td>Skeletal dissolution, larval mortality</td>
+              <td>UNFCCC Paris Agreement (Carbon reductions)</td>
+            </tr>
+            <tr>
+              <td><strong>Commercial Bycatch</strong></td>
+              <td>&approx; 9.1 Million Metric Tons</td>
+              <td>Sharks, Marine Mammals, Rays</td>
+              <td>Trophic cascade disruptions, population crashes</td>
+              <td>UN High Seas Treaty (BBNJ) &amp; FAO Code</td>
+            </tr>
+            <tr>
+              <td><strong>Coral Thermal Bleaching</strong></td>
+              <td>&gt;50% of global reefs degraded</td>
+              <td>Scleractinian Corals &amp; Reef Fish</td>
+              <td>Loss of three-dimensional coastal architecture</td>
+              <td>Convention on Biological Diversity (30x30 Target)</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">
+                <em>Data Source: Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) 2026.</em>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive Ocean Literacy Quiz (Core Interactive Feature #4) -->
+    <section id="oceanQuizSection" class="quiz-box">
+      <div class="section-header" style="margin-bottom: 1.5rem;">
+        <h2>Interactive Ocean Ecological Literacy Quiz</h2>
+        <p>
+          Assess your comprehension of marine biology, trophic food webs, and conservation science. Answer the questions below to receive an instant empirical score and educational diagnostic report.
+        </p>
+      </div>
+
+      <form id="oceanQuizForm">
+        <!-- Question 1 -->
+        <div class="quiz-question-item">
+          <h4>1. What percentage of Earth's atmospheric oxygen is generated by marine photosynthetic organisms?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option-label">
+              <input type="radio" name="q1" value="a"> Approximately 10% to 20%
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q1" value="b"> Between 50% and 80% (Correct: Driven by phytoplankton &amp; Prochlorococcus)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q1" value="c"> Exactly 95%
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q1" value="d"> Less than 5%
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question-item">
+          <h4>2. What chemical compound is depleted in seawater as a direct consequence of ocean acidification, hindering shell calcification?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option-label">
+              <input type="radio" name="q2" value="a"> Sodium chloride (NaCl)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q2" value="b"> Dissolved gaseous nitrogen (N<sub>2</sub>)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q2" value="c"> Carbonate ions (CO<sub>3</sub><sup>2-</sup>)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q2" value="d"> Magnesium sulfate (MgSO<sub>4</sub>)
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question-item">
+          <h4>3. How much hydrostatic pressure is exerted at a depth of 1,000 meters in the ocean?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option-label">
+              <input type="radio" name="q3" value="a"> Approximately 10 atmospheres
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q3" value="b"> Approximately 101 atmospheres (1 atm surface + 100 atm water column)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q3" value="c"> 500 atmospheres
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q3" value="d"> Pressure does not change with depth
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question-item">
+          <h4>4. What microscopic endosymbionts provide scleractinian stony corals with metabolic photosynthates and coloration?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option-label">
+              <input type="radio" name="q4" value="a"> Zooxanthellae (Symbiodiniaceae)
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q4" value="b"> Nematocyst cnidocytes
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q4" value="c"> Cyanobacteria filaments
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="q4" value="d"> Barophilic archaea
+            </label>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem;">
+          <button type="button" id="submitQuizBtn" class="btn btn-primary">
+            <span>📊</span> Evaluate Quiz Answers
+          </button>
+          <button type="button" id="resetQuizBtn" class="btn btn-secondary" style="color: var(--text-secondary); border-color: var(--border-dark);">
+            Reset Quiz
+          </button>
+        </div>
+      </form>
+
+      <!-- Dynamic Quiz Result Output -->
+      <div id="quizResultDisplay" class="quiz-result-card" role="region" aria-live="polite">
+        <h4 id="quizResultHeading" style="font-size: 1.8rem; color: var(--color-deep-ocean); margin-bottom: 0.5rem;">Quiz Result</h4>
+        <p id="quizScoreText" style="font-size: 1.4rem; font-weight: bold; margin-bottom: 0.8rem;"></p>
+        <p id="quizFeedbackText" style="font-size: 1.3rem; margin: 0;"></p>
+      </div>
+    </section>
+
+    <!-- Section 4: Citizen Science Conservation Pledge & Threat Reporting Form (Core Feature #5: DOM Manipulation & Full Form Validation) -->
+    <section id="pledgeFormSection" class="form-card">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2>Citizen Science Pledge &amp; Marine Threat Report Form</h2>
+        <p>
+          Submit your personal marine conservation pledge or report an observed marine environmental hazard (e.g. ghost fishing gear, illegal dumping, coral damage, or stranded marine wildlife). All submissions undergo real-time client-side DOM validation.
+        </p>
+      </div>
+
+      <!-- Semantic HTML5 Form -->
+      <form id="marinePledgeForm" novalidate>
+
+        <!-- Fieldset 1: Participant Information -->
+        <fieldset>
+          <legend>1. Observer &amp; Steward Identification</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required-star">*</span></label>
+              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. Dr. Jane Doe" required minlength="3">
+              <span class="error-message" id="nameError">Please enter a valid full name (minimum 3 characters).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddress">Academic / Personal Email <span class="required-star">*</span></label>
+              <input type="email" id="emailAddress" name="emailAddress" class="form-input" placeholder="e.g. jane.doe@university.edu" required>
+              <span class="error-message" id="emailError">Please enter a valid email address (e.g. user@domain.com).</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactPhone">Contact Telephone (Optional)</label>
+              <input type="tel" id="contactPhone" name="contactPhone" class="form-input" placeholder="+1 (555) 019-2834">
+            </div>
+
+            <div class="form-group">
+              <label for="geographicRegion">Geographic Coastal Region <span class="required-star">*</span></label>
+              <select id="geographicRegion" name="geographicRegion" class="form-input" required>
+                <option value="">-- Select Oceanic Region --</option>
+                <option value="North Pacific Ocean">North Pacific Ocean</option>
+                <option value="South Pacific Ocean">South Pacific Ocean</option>
+                <option value="North Atlantic Ocean">North Atlantic Ocean</option>
+                <option value="South Atlantic Ocean">South Atlantic Ocean</option>
+                <option value="Indian Ocean">Indian Ocean</option>
+                <option value="Southern / Antarctic Ocean">Southern / Antarctic Ocean</option>
+                <option value="Arctic Ocean">Arctic Ocean</option>
+                <option value="Inland / Non-Coastal">Inland Catchment / Freshwater Basin</option>
+              </select>
+              <span class="error-message" id="regionError">Please select your primary oceanic or catchment region.</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Fieldset 2: Incident or Action Details -->
+        <fieldset>
+          <legend>2. Action Type &amp; Observation Details</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reportType">Submission Purpose <span class="required-star">*</span></label>
+              <select id="reportType" name="reportType" class="form-input" required>
+                <option value="">-- Select Purpose --</option>
+                <option value="Personal Conservation Pledge">Personal Conservation Stewardship Pledge</option>
+                <option value="Marine Plastic / Trash Sighting">Marine Plastic or Abandoned Fishing Gear Report</option>
+                <option value="Coral Bleaching Incident">Observed Coral Bleaching Incident</option>
+                <option value="Stranded Marine Wildlife">Distressed or Stranded Marine Specimen</option>
+                <option value="Other Anthropogenic Stressor">Other Anthropogenic Environmental Hazard</option>
+              </select>
+              <span class="error-message" id="reportTypeError">Please designate the primary purpose of this submission.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="observationDate">Date of Observation / Commitment <span class="required-star">*</span></label>
+              <input type="date" id="observationDate" name="observationDate" class="form-input" required>
+              <span class="error-message" id="dateError">Please specify a valid calendar date.</span>
+            </div>
+          </div>
+
+          <!-- Ecological Concern Severity (Range Slider) -->
+          <div class="form-group">
+            <label for="urgencySlider">
+              Perceived Ecological Urgency / Commitment Tier: 
+              <span id="urgencyValueLabel" style="color: var(--color-teal); font-weight: bold;">Moderate (Tier 3)</span>
+            </label>
+            <input type="range" id="urgencySlider" name="urgencySlider" min="1" max="5" value="3" step="1">
+            <div style="display: flex; justify-content: space-between; font-size: 1.1rem; color: var(--text-muted); margin-top: 0.3rem;">
+              <span>Tier 1: Minimal</span>
+              <span>Tier 2: Routine</span>
+              <span>Tier 3: Moderate</span>
+              <span>Tier 4: Critical</span>
+              <span>Tier 5: Emergency</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Fieldset 3: Active Pledges & Narrative -->
+        <fieldset>
+          <legend>3. Conservation Action Commitments &amp; Documentation</legend>
+
+          <div class="form-group">
+            <label>Specific Conservation Actions Committed to (Select at least one) <span class="required-star">*</span></label>
+            <div class="checkbox-group" id="pledgeCheckboxesGroup">
+              <label class="checkbox-label">
+                <input type="checkbox" name="pledgeActions" value="eliminate_single_use">
+                <span>Refuse and eliminate single-use plastics from daily consumption patterns</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="pledgeActions" value="sustainable_seafood">
+                <span>Exclusively choose verified MSC/ASC certified sustainable seafood or adopt plant alternatives</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="pledgeActions" value="carbon_footprint">
+                <span>Curtail personal carbon footprint to slow ocean acidification and marine heatwaves</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="pledgeActions" value="cleanups">
+                <span>Participate actively in coastal, riparian, or municipal beach clean-up initiatives</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="pledgeActions" value="advocacy">
+                <span>Promote scientific marine literacy and advocate for marine protected areas (MPAs)</span>
+              </label>
+            </div>
+            <span class="error-message" id="checkboxError">Please check at least one conservation commitment action.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="narrativeStatement">Detailed Narrative or Incident Description <span class="required-star">*</span></label>
+            <textarea id="narrativeStatement" name="narrativeStatement" class="form-input" rows="5" maxlength="500" placeholder="Detail your personal action plan, the environmental hazard observed, or coordinates/landmarks..." required></textarea>
+            <div class="char-counter">
+              <span id="charCount">0</span> / 500 characters
+            </div>
+            <span class="error-message" id="narrativeError">Please write at least 20 characters describing your commitment or observation.</span>
+          </div>
+        </fieldset>
+
+        <!-- Form Action Buttons -->
+        <div style="display: flex; gap: 1.5rem; justify-content: flex-end; flex-wrap: wrap;">
+          <button type="reset" id="formResetBtn" class="btn btn-secondary" style="color: var(--text-secondary); border-color: var(--border-dark);">
+            Reset Form
+          </button>
+          <button type="submit" id="formSubmitBtn" class="btn btn-coral">
+            <span>🚀</span> Validate &amp; Submit Stewardship Pledge
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- Frequently Asked Conservation Questions (Semantic <details> and <summary>) -->
+    <section style="margin-top: 4rem; margin-bottom: 3.5rem;">
+      <h2>Frequently Addressed Conservation Inquiries</h2>
+      
+      <details>
+        <summary>What constitutes an effective Marine Protected Area (MPA)?</summary>
+        <p>
+          An effective Marine Protected Area is a clearly demarcated geographic coastal or pelagic zone dedicated and managed through legal instruments to achieve long-term nature conservation. Fully protected "no-take" marine reserves allow fish biomass to regenerate by upwards of four-hundred percent, creating vital spillover benefits into adjacent open-fishing waters.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why are microplastics considered uniquely dangerous compared to macro debris?</summary>
+        <p>
+          Microplastics (&lt;5 mm) possess enormous surface-area-to-volume ratios, allowing them to rapidly adsorb hydrophobic persistent organic pollutants (such as PCBs, DDT, and dioxins) from surrounding seawater. Because of their tiny dimensions, they are readily ingested by lower-trophic filter feeders, transferring toxic compounds into seafood destined for human consumption.
+        </p>
+      </details>
+
+      <details>
+        <summary>How does ocean acidification affect marine acoustic communication?</summary>
+        <p>
+          As seawater pH declines and chemical equilibrium shifts, low-frequency sound absorption diminishes by up to forty percent in specific ocean basins. Consequently, ambient anthropogenic underwater noise (from commercial cargo shipping and naval sonar) propagates farther, interfering with whale song navigation and larval settlement cues.
+        </p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- Submission Confirmation Modal (Dynamic DOM Feedback) -->
+  <div class="modal-overlay" id="submissionModal" role="dialog" aria-modal="true" aria-labelledby="modalConfirmationTitle">
+    <div class="modal-dialog">
+      <div style="font-size: 4rem; margin-bottom: 0.5rem;">🌊</div>
+      <h3 id="modalConfirmationTitle">Stewardship Pledge Registered!</h3>
+      <p style="font-size: 1.4rem; color: var(--text-secondary); margin-bottom: 1.2rem;">
+        Thank you, <strong id="modalUserName" style="color: var(--color-deep-ocean);"></strong>. Your contribution has been recorded in the Ocean Life Discovery Citizen Science Repository.
+      </p>
+
+      <div style="background-color: var(--bg-alt); padding: 1.2rem; border-radius: var(--radius-sm); text-align: left; font-size: 1.25rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+        <p style="margin: 0 0 0.4rem 0;"><strong>Confirmation Code:</strong> <code id="modalConfirmCode" style="color: var(--color-teal); font-weight: bold;"></code></p>
+        <p style="margin: 0 0 0.4rem 0;"><strong>Assigned Action:</strong> <span id="modalActionType"></span></p>
+        <p style="margin: 0 0 0.4rem 0;"><strong>Coastal Region:</strong> <span id="modalRegion"></span></p>
+        <p style="margin: 0;"><strong>Active Commitments:</strong> <span id="modalCommitmentCount"></span> selected</p>
+      </div>
+
+      <button class="btn btn-primary" id="closeSubmissionModalBtn" style="width: 100%; justify-content: center;">
+        Return to Portal
+      </button>
+    </div>
+  </div>
+
+  <!-- Semantic Footer -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Ocean Life Discovery</h4>
+        <p>
+          Conservation awareness, citizen science reporting, and ocean stewardship module supporting academic laboratory research.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Interconnected Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">&rarr; Home Portal</a></li>
+          <li><a href="species.html">&rarr; Marine Species Catalog</a></li>
+          <li><a href="ecosystems.html">&rarr; Ocean Ecosystems</a></li>
+          <li><a href="gallery.html">&rarr; Underwater Galleries</a></li>
+          <li><a href="awareness.html">&rarr; Awareness &amp; Action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>UN SDG 14 Targets</h4>
+        <p>
+          Aiming to prevent and significantly reduce marine pollution of all kinds, sustainably manage coastal ecosystems, and address ocean acidification.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ocean Life Discovery Project. Lab Project Module 5: Awareness, Form Validation &amp; Ecological Quiz.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
